@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}
