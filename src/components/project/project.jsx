@@ -1,11 +1,10 @@
 import React from 'react';
 import './project.css';
 
-const Project = ({ title, date, link, description, image }) => {
+const Project = ({ title, date, description, image }) => {
     return (
         <div className="project">
-            <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
-                <div className="project-block">
+                <div className="project-block" style = {{backgroundImage: `url(${image})`}}>
                     <div className="project-content">
                         <div className="project-overlay"></div>
                         <div className="project-info">
@@ -16,7 +15,6 @@ const Project = ({ title, date, link, description, image }) => {
 
                     </div>
                 </div>
-            </a>
             <p className="project-date">{date}</p>
         </div>
     );

@@ -1,0 +1,21 @@
+.projects {
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.projects-done, .projects-inProgress {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+.projects-done {
+    height: auto;
+}
+
+.projects-inProgress {
+    margin-top: 60px;
+}

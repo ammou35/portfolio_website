@@ -1,0 +1,58 @@
+import React from 'react';
+import Project from "../project/project";
+import './projects.css';
+
+const Projects = () => {
+    return (
+        <div className="projects">
+            <div className="projects-done">
+                <Project
+                    title='Simulateur de découpes CNC'
+                    date='Automne 2024'
+                    description="Application développée en Java et Java Swing qui permet de simuler et d’importer ou d’exporter le fichier GCODE correspondant à
+                    cette simulation tout en garantissant sa cohérence en gérant les coupes invalides en fonction de leur type et de leur emplacement dans le panneau"
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+                <Project
+                    title='Labyrinthe assisté'
+                    date='Automne 2024'
+                    description="Jeu codé en VHDL sur Xilinx qui affiche une aide visuelle s'il détecte que le joueur met trop de temps
+                    à se déplacer ou s’il reste coincé dans le but d'aider les personnes à déficiences mentales à améliorer leur coordination œil-main"
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+                <Project
+                    title='Détecteur de niveau sonore'
+                    date='Automne 2024'
+                    description="Programme réalisé en C sur STM32CubeIDE qui détecte le niveau d'intensité sonore et adapte
+                    l'affichage en fonction de sa valeur et de si cette dernière dépasse un certain seuil"
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+                <Project
+                    title='Portfolio personnel'
+                    date='Hiver 2025'
+                    description="Site web créé en React pour présenter mes compétences, mes expériences et mes projets, incluant mes coordonnées"
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+                <Project
+                    title='Quoridor'
+                    date='Automne 2022'
+                    description="Jeu développé en Python3 sur VS Code et basé sur le véritable jeu du Quoridor avec un API
+                    qui envoie des requêtes au serveur de l’enseignant pour pouvoir jouer contre un bot"
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+            </div>
+            <div className="projects-inProgress">
+                <Project
+                    title='Personnage en 3D'
+                    date='Été 2024'
+                    description="Modélisation en cours d’un personnage 3D sur Blender pour apprendre et pratiquer les étapes clés de la création
+                     de personnages de jeux vidéo, telles que le block out, le sculpting, la retopologie, et à terme, le rigging.
+                     Ce projet s’inscrit dans le cadre d’une idée de jeu vidéo que je développe, et ce personnage sera intégré au jeu une fois terminé."
+                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                />
+            </div>
+        </div>
+    );
+};
+
+export default Projects;
