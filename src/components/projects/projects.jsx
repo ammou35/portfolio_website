@@ -4,6 +4,7 @@ import Project from "../project/project";
 import cnc from '../../images/cnc.png';
 import maze from '../../images/maze.png';
 import niveau_sonore from '../../images/niveau_sonore.png';
+import portfolio from '../../images/portfolio.png';
 import quoridor from '../../images/quoridor.png';
 import dijkstra from '../../images/dijkstra.png';
 import character3D from '../../images/character3D.png';
@@ -40,7 +41,7 @@ const Projects = () => {
                     title='Portfolio personnel'
                     date='Hiver 2025'
                     description="Site web créé en React pour présenter mes compétences, mes expériences et mes projets, incluant mes coordonnées"
-                    image='https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png'
+                    image={portfolio}
                 />
                 <Project
                     title='Calcul de l’itinéraire le plus court avec la RTC'
