@@ -10,7 +10,6 @@ const Project = ({ title, date, description, image }) => {
                         <div className="project-info">
                             <h3 className="project-title">{title}</h3>
                             <p className="project-description">{description}</p>
-                            <button className="project-button">Voir plus</button>
                         </div>
 
                     </div>

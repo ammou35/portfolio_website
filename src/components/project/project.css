@@ -60,17 +60,6 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.project-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #fff;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
 .project:hover .project-info {
     opacity: 1;
 }
