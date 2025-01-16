@@ -1,5 +1,6 @@
 .projects {
-    padding: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     box-sizing: border-box;
 }
 
@@ -13,9 +14,11 @@
 }
 
 .projects-done {
+    margin-top: 40px;
+    margin-bottom: 40px;
     height: auto;
 }
 
 .projects-inProgress {
-    margin-top: 60px;
+    margin-top: 40px;
 }

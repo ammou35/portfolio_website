@@ -1,15 +1,22 @@
 import React from "react";
+import Title from "../title/title";
+import me from '../../images/me.jpg';
 import './aboutMe.css';
 
 
 const AboutMe = () => {
     return (
-        <section className="aboutMe">
+        <section className="aboutMe" id="aboutMe">
             <div className="aboutMe-content">
-                <img src="https://lookingglass.montroseschool.org/wp-content/uploads/2023/03/3-13-remus.png" className="aboutMe-picture" alt="Me !"/>
-                <p className="aboutMe-text">
-                    Je suis une étudiante passionnée.
-                </p>
+                <img src={me} className="aboutMe-picture" alt="Me !"/>
+                <div>
+                    <Title title='À propos de moi'/>
+                    <p className="aboutMe-text">
+                        Je suis en 3ᵉ année de génie informatique à l’Université Laval, passionnée par la création et le développement
+                        de projets alliant technique et créativité. Responsable socio-culturel du club de développement de jeux vidéos à l'Université,
+                        j’aime partager et apprendre aux côtés de personnes animées par la même envie d’innover.
+                    </p>
+                </div>
             </div>
         </section>
     );
