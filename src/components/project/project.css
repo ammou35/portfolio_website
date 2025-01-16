@@ -68,13 +68,13 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
-    color: white;
+    background-color: #ffae00;
+    color: black;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
-    border: 3px solid white;
+    border: 3px solid black;
     transition: all 0.3s ease-in-out;
     z-index: 10;
     bottom: -15px;

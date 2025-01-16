@@ -10,9 +10,9 @@ const AboutMe = () => {
             <div className="aboutMe-content">
                 <img src={me} className="aboutMe-picture" alt="Me !"/>
                 <div>
-                    <Title title='À propos de moi' style={{color: `#94A761`}}/>
+                    <Title title='À propos de moi !' style={{color: `white`}}/>
                     <p className="aboutMe-text">
-                        Je suis Amira Mouamine, une étudiante en 3ᵉ année de génie informatique à l’Université Laval passionnée par la création et le développement
+                        Je suis étudiante en 3ᵉ année de génie informatique à l’Université Laval, passionnée par la création et le développement
                         de projets alliant technique et créativité ! Responsable socio-culturel du club de développement de jeux vidéos à l'Université,
                         j’aime partager et apprendre aux côtés de personnes animées par la même envie d’innover.
                     </p>

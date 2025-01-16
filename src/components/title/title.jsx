@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import './title.css';
 
-const Title = ({ title }) => {
+const Title = ({ title, style }) => {
     const [typingIndex, setTypingIndex] = useState(0);
     const [cursorVisible, setCursorVisible] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -59,9 +59,8 @@ const Title = ({ title }) => {
     };
 
     return (
-        <div className="title" ref={titleRef}>
+        <div className="title" ref={titleRef} style={style}>
             {splitTitle()}
-
             <div
                 className="cursor"
                 style={{

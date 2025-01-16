@@ -13,7 +13,7 @@ import './projects.css';
 const Projects = () => {
     return (
         <div className="projects" id="projects">
-            <Title title='Projets'/>
+            <Title title='Projets' style={{color: `#0A1430`}}/>
             <div className="projects-done">
                 <Project
                     title='Simulateur de découpes CNC'
@@ -57,7 +57,7 @@ const Projects = () => {
                     image={quoridor}
                 />
             </div>
-            <Title title='En cours...'/>
+            <Title title='En cours...' style={{color: `#0A1430`}}/>
             <div className="projects-inProgress">
                 <Project
                     title='Personnage en 3D'

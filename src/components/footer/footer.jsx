@@ -4,7 +4,7 @@ import './footer.css';
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer" id="footer">
             <div className="footer-content">
                 <div className="footer-name">
                     Amira Mouamine
@@ -18,11 +18,11 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-contact">
-                    <p className="footer-section-title">Coordonnées</p>
+                    <p className="footer-section-title">Contact</p>
                     <ul>
-                        <li><FaPhoneAlt /> +1 (418) 456-8381</li>
-                        <li><FaEnvelope /> amira.mouamine@outlook.fr</li>
-                        <li><FaMapMarkerAlt /> 1100, Medecine Avenue, Quebec (QC) G1V 0A9</li>
+                        <li><FaPhoneAlt style={{color: `#ffae00`}}/> +1 (418) 456-8381</li>
+                        <li><FaEnvelope style={{color: `#ffae00`}}/> amira.mouamine@outlook.fr</li>
+                        <li><FaMapMarkerAlt style={{color: `#ffae00`}}/> Québec (QC)</li>
                     </ul>
                 </div>
             </div>

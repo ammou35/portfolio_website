@@ -8,12 +8,12 @@
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
-    background: #47651a;
+    background: #0A1430;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-title {
-    color: white;
+    color: #ff5400;
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
@@ -37,7 +37,7 @@
 }
 
 .header-link:hover {
-    text-decoration: underline;
+    color: #ffae00;
 }
 
 .header-icon-link {
@@ -47,16 +47,24 @@
 }
 
 .header-icon-link:hover {
+    color: #ffae00;
     opacity: 0.7;
 }
 
 .header-nav a[href$=".pdf"] {
     padding: 5px 15px;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 5px;
-    background-color: lightgray;
+    background-color: #ffae00;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .header-nav a[href$=".pdf"]:hover {
-    background-color: darkgray;
+    background-color: #b6512e;
+    border-color: white;
+    color: white;
 }

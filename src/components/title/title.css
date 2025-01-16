@@ -15,15 +15,6 @@
     white-space: nowrap;
 }
 
-.cursor {
-    position: absolute;
-    width: 2px;
-    background-color: black;
-    animation: blink 0.7s step-end infinite;
-    height: 100%;
-    visibility: visible;
-}
-
 @keyframes blink {
     0%, 100% {
         opacity: 1;
