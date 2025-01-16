@@ -14,11 +14,11 @@ const Footer = () => {
                     <ul>
                         <li><a href="#aboutMe">À propos de moi</a></li>
                         <li><a href="#projects">Projets</a></li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#header">Profil</a></li>
                     </ul>
                 </div>
                 <div className="footer-contact">
-                    <p className="footer-section-title">Contact</p>
+                    <p className="footer-section-title">Coordonnées</p>
                     <ul>
                         <li><FaPhoneAlt style={{color: `#ffae00`}}/> +1 (418) 456-8381</li>
                         <li><FaEnvelope style={{color: `#ffae00`}}/> amira.mouamine@outlook.fr</li>

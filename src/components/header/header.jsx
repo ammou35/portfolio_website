@@ -5,12 +5,12 @@ import './header.css';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="header" id="header">
             <h1 className="header-title">Amira Mouamine</h1>
             <nav className="header-nav">
                 <a href="#aboutMe" className="header-link">À propos de moi</a>
                 <a href="#projects" className="header-link">Projets</a>
-                <a href="#footer" className="header-link">Contact</a>
+                <a href="#footer" className="header-link">Coordonnées</a>
                 <a href="https://github.com/ammou35" target="_blank" rel="noopener noreferrer" className="header-icon-link">
                     <FaGithub size={24} />
                 </a>
