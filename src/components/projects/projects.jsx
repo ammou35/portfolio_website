@@ -8,6 +8,7 @@ import portfolio from '../../images/portfolio.png';
 import quoridor from '../../images/quoridor.png';
 import dijkstra from '../../images/dijkstra.png';
 import character3D from '../../images/character3D.png';
+import floaty_frog from '../../images/floaty_frog.png';
 import './projects.css';
 
 
@@ -40,7 +41,8 @@ const Projects = () => {
                 <Project
                     title='Portfolio personnel'
                     date='Hiver 2025'
-                    description="Site web créé en React pour présenter mes compétences, mes expériences et mes projets, incluant mes coordonnées"
+                    description="Site web interactif avec React.js pour présenter mes projets, ainsi que mes coordonnées,
+                    avec intégration de Docker pour la gestion de l'environnement de développement."
                     image={portfolio}
                 />
                 <Project
@@ -67,6 +69,13 @@ const Projects = () => {
                      de personnages de jeux vidéo, telles que le block out, le sculpting, la retopologie, et à terme, le rigging.
                      Ce projet s’inscrit dans le cadre d’une idée de jeu vidéo que je développe, et ce personnage sera intégré au jeu une fois terminé."
                     image={character3D}
+                />
+                <Project
+                    title='Floaty Frog'
+                    date='Automne 2024'
+                    description="Jeu développé comme tutoriel pour l'apprentissage d'Unreal Engine lors d'une rencontre que j'ai organisée pour le club
+                    de développement de jeux vidéos. Il est destiné à être simplifié dans le but de rendre le jeu plus accessible pour les membres du club."
+                    image={floaty_frog}
                 />
             </div>
         </div>

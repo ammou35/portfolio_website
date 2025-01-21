@@ -7,7 +7,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.4.4",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -15,15 +15,6 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": "off"
-    }
   },
   "browserslist": {
     "production": [
@@ -38,8 +29,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^6.8.0"
   }
 }
