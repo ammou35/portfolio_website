@@ -1,21 +1,20 @@
-import React from 'react';
-import './project.css';
+import React from "react";
+import "./project.css";
 
-const Project = ({ title, date, description, image }) => {
+const Project = ({ title, description, tags, image, reverse, tone }) => {
     return (
-        <div className="project">
-                <div className="project-block" style = {{backgroundImage: `url(${image})`}}>
-                    <div className="project-content">
-                        <div className="project-overlay"></div>
-                        <div className="project-info">
-                            <h3 className="project-title">{title}</h3>
-                            <p className="project-description">{description}</p>
-                        </div>
-
-                    </div>
+        <article className={`projCard rounded tone-${tone} ${reverse ? "reverse" : ""}`}>
+            <div className="projMedia rounded" style={{backgroundImage: `url(${image})`}}/>
+            <div className="projInfo">
+                <h3 className="projTitle">{title}</h3>
+                <p className="projDesc">{description}</p>
+                <div className="projTags">
+                    {tags?.map((t) => (
+                        <span className="tag" key={t}>{t}</span>
+                    ))}
                 </div>
-            <p className="project-date">{date}</p>
-        </div>
+            </div>
+        </article>
     );
 };
 

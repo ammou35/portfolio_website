@@ -1,25 +1,221 @@
-.projects {
-    padding-left: 10%;
-    padding-right: 10%;
-    box-sizing: border-box;
+.projectsWrap{
+    padding: 70px 18px;
 }
 
-.projects-done, .projects-inProgress {
+.projectsHeader{
+    max-width: 1100px;
+    margin: 0 auto 22px;
+    padding: 0 4px;
+    position: relative;
+}
+
+.projectsKicker{
+    font-size: 12px;
+    letter-spacing: .14em;
+    opacity: .7;
+    margin-bottom: 10px;
+}
+
+.projectsTitle{
+    margin: 0;
+    font-size: clamp(30px, 4vw, 56px);
+    line-height: 1.02;
+}
+
+.projectsGridCards{
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    column-gap: 20px;
-    row-gap: 40px;
-    justify-items: center;
-    align-items: start;
+    gap: 34px;
+    column-gap: 44px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.projects-done {
-    margin-top: 40px;
-    margin-bottom: 40px;
+.projCard2{
+    --stagger: 0px;
+    position: relative;
+
+    border-radius: 28px;
+    overflow: hidden;
+    background: rgba(213,184,147,.10);
+    border: 1px solid rgba(213,184,147,.18);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: unset;
+
+    will-change: transform;
+    transition: transform 220ms var(--e), box-shadow 220ms var(--e);
+    transform: translateY(var(--stagger));
+}
+
+.projectsGridCards > .projCard2:nth-child(2n){
+    --stagger: clamp(120px, 10vh, 190px);
+}
+.projectsGridCards > .projCard2:nth-child(4n){
+    --stagger: clamp(120px, 10vh, 190px);
+}
+
+.projCard2:hover{
+    box-shadow: 0 16px 44px rgba(0,0,0,.12);
+    transform: translateY(calc(var(--stagger) - 6px));
+}
+
+@media (max-width: 860px){
+    .projectsGridCards > .projCard2{
+        --stagger: 0px;
+    }
+}
+
+.projMedia2{
+    background: rgba(0,0,0,.04);
+    overflow: hidden;
+    display: block;
+}
+
+.projMedia2 img{
+    width: 100%;
     height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-.projects-inProgress {
-    margin-top: 40px;
+.projBody2{
+    padding: 16px 16px 18px;
+    display: grid;
+    gap: 10px;
 }
+
+
+.projTitle2{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 850;
+    letter-spacing: .02em;
+}
+
+.projDesc2{
+    margin: 0;
+    line-height: 1.6;
+    opacity: .82;
+    max-width: 65ch;
+}
+
+.projTags2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag2{
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(213,184,147,.22);
+    background: rgba(213,184,147,.12);
+    color: rgba(213,184,147,.95);
+}
+
+body.is-dark .projCard2{
+    border-color: rgba(255,255,255,.14);
+    background: rgba(255,255,255,.06);
+}
+body.is-dark .projMedia2{
+    background: rgba(255,255,255,.06);
+}
+body.is-dark .tag2{
+    border-color: rgba(255,255,255,.18);
+    background: rgba(255,255,255,.08);
+    color: var(--darkInk);
+}
+
+.projectsMarquee{
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 999px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.projectsMarqueeTrack{
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.projectsMarqueeInner{
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    font-size: clamp(28px, 4.5vw, 70px);
+    line-height: 1;
+    opacity: .4;
+}
+
+.projGithub{
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+    border: 0;
+    border-radius: 14px;
+
+    color: rgba(97,120,145,.95);
+    text-decoration: none;
+
+    transition:
+            transform 220ms var(--e),
+            background 220ms var(--e),
+            color 220ms var(--e);
+}
+
+.projGithubIcon{
+    width: 20px;
+    height: 20px;
+    opacity: .95;
+    transition: transform 220ms var(--e), filter 220ms var(--e), opacity 220ms var(--e);
+}
+
+.projGithub:hover,
+.projGithub:focus-visible{
+    transform: translateY(-1px);
+    background: rgba(97,120,145,.14);
+    color: rgba(185,215,255,.95);
+    outline: none;
+}
+
+.projGithub:hover .projGithubIcon,
+.projGithub:focus-visible .projGithubIcon{
+    transform: translateY(-1px);
+    opacity: 1;
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+}
+
+.projGithubDisabled{
+    color: rgba(97,120,145,.35);
+    cursor: default;
+    pointer-events: none;
+    background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .projGithub,
+    .projGithubIcon{
+        transition: none !important;
+    }
+}
+

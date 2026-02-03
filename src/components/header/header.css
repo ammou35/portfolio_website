@@ -1,71 +1,90 @@
-.header {
-    display: flex;
-    justify-content: space-evenly;
+.sheetTopBar{
+    height: 56px;
+    width: min(1100px, 92%);
+    margin: 10px auto 0;
+
+    border-radius: 999px;
+
+    background: rgba(37,52,79,.30);
+    border: 1px solid rgba(213,184,147,.22);
+    box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    backdrop-filter: blur(14px);
+
+    color: rgba(213,184,147,.95);
+    padding: 0 16px;
+}
+
+.sheetTopBar5{
+    display: grid;
     align-items: center;
-    padding: 10px 20px;
-    top: 0;
-    height: 8vh;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1000;
-    background: #0A1430;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    grid-template-columns: 3fr .9fr .9fr .9fr 1.1fr;
+    column-gap: 14px;
 }
 
-.header-title {
-    color: #ff5400;
-    font-size: clamp(0.75rem, 5vw, 1.2rem);
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
-    flex-shrink: 0;
+.sheetMark{
+    font-family: var(--font);
+    font-size: 12px;
+    letter-spacing: .18em;
+    font-weight: 850;
+    opacity: .95;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-    flex-grow: 1;
-    justify-content: center;
-}
+.sheetNavItem{
+    justify-self: center;
+    height: 38px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 
-.header-link {
-    color: white;
+    font-family: var(--font);
+    font-weight: 750;
+    font-size: 14px;
+    color: inherit;
+    opacity: .9;
     text-decoration: none;
-    font-size: clamp(0.75rem, 2vw, 1rem);
-}
 
-.header-link:hover {
-    color: #ffae00;
-}
-
-.header-icon-link {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.header-icon-link:hover {
-    color: #ffae00;
-    opacity: 0.7;
-}
-
-.header-nav a[href$=".pdf"] {
-    padding: clamp(5px, 2vw, 10px) 15px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #ffae00;
-    color: black;
-    font-size: clamp(0.75rem, 2vw, 1rem);
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    position: relative;
+    padding: 0 8px;
+    border-radius: 999px;
+
+    transition: background 220ms var(--e), transform 220ms var(--e), opacity 220ms var(--e);
 }
 
-.header-nav a[href$=".pdf"]:hover {
-    background-color: #b6512e;
-    border-color: white;
-    color: white;
+.sheetNavItem::after{
+    content:"";
+    position:absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 7px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--sand);
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 220ms var(--e), transform 220ms var(--e);
+}
+
+.sheetNavItem:hover{
+    opacity: 1;
+    background: rgba(213,184,147,.10);
+    transform: translateY(-1px);
+}
+.sheetNavItem:hover::after{
+    opacity: .95;
+    transform: translateY(0);
+}
+
+.sheetTopBar5 a.sheetNavItem{ justify-self: end; }
+
+@media (max-width: 860px){
+    .sheetTopBar5{ grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .sheetMark{ display:none; }
+    .sheetTopBar{ width: min(1100px, calc(100% - 28px)); }
 }

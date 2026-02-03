@@ -1,0 +1,40 @@
+.heroWrap{
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 110px 18px 60px;
+
+    background:
+            radial-gradient(900px 600px at 20% 20%, rgba(218,166,62,.22), transparent 60%),
+            radial-gradient(900px 700px at 70% 40%, rgba(5,82,84,.18), transparent 62%),
+            var(--darkBg);
+
+    color: var(--darkInk);
+}
+
+.heroInner{
+    width: min(1200px, 98vw);
+    margin: 0 auto;
+}
+
+.heroKicker{
+    font-size: 12px;
+    letter-spacing: .16em;
+    opacity: .8;
+}
+
+.heroSlogan{
+    margin: 18px 0 12px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.95;
+    font-size: clamp(52px, 8vw, 112px);
+}
+
+.heroSub{
+    margin: 0;
+    color: var(--muted);
+    max-width: 70ch;
+    line-height: 1.6;
+    font-size: 16px;
+}

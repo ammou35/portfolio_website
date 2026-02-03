@@ -1,54 +1,194 @@
-.aboutMe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    margin: 6vh 15vw;
-    background-color: #93abc5;
-    border-radius: 8vw;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+.aboutWrap{
+    padding: 90px 18px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.aboutMe-content {
+.showcase{
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    align-items: center;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 26px;
+    align-items: start;
 }
 
-.aboutMe-content > div {
+.showcaseIntro{
+    padding-right: 12px;
+}
+
+.showcaseGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 46px;
+    margin-top: 6px;
+}
+
+.col{
+    display: grid;
+    gap: 26px;
+}
+
+.showcaseKicker{
+    font-size: 12px;
+    letter-spacing: .16em;
+    opacity: .7;
+}
+
+.showcaseTitle{
+    margin: 10px 0 8px;
+    font-size: clamp(26px, 3vw, 44px);
+    line-height: 1.05;
+}
+
+.showcaseText{
+    margin: 0;
+    max-width: 72ch;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.blockHead{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 80vw;
-    overflow: hidden;
-    flex-grow: 1;
+    gap: 12px;
+    margin-bottom: 6px;
 }
 
-.aboutMe-text {
-    color: #0A1430;
-    margin-top: 20px;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    text-align: center;
-    max-width: 80%;
-    max-height: 40%;
-    padding: 0 10px;
-    flex-grow: 0;
-    flex-shrink: 0;
+.blockLabel{
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--accent2);
+    position: relative;
+    padding-bottom: 6px;
 }
 
-.aboutMe-picture {
-    width: 100%;
-    height: auto;
-    max-width: 15rem;
-    max-height: 15rem;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center -3rem;
-    justify-self: center;
-    align-self: center;
+.blockLabel::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 34px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--accent);
+    opacity: .85;
+}
+.subHead{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.subLabel{
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--accent);
+}
+
+.blockLogo{
+    height: 44px;
+    width: 170px;
+    object-fit: contain;
+    opacity: .95;
     display: block;
+    transform: scale(1.2);
+}
+
+.logoFrame{
+    width: 170px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.logoFrame.ul .blockLogo.ul{
+    transform: scale(6);
+}
+
+.blockLogo{
+    height: 44px;
+    width: 170px;
+    object-fit: contain;
+    opacity: .95;
+    display: block;
+}
+
+.blockMain{ display: grid; gap: 6px; }
+.blockLineStrong{
+    font-weight: 750;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.blockLineMuted{ color: var(--muted); }
+.blockLineMeta{
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: .9;
+    margin-top: 2px;
+}
+
+.chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip{
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 13px;
+}
+
+.chip-skill{
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(218,166,62,.35);
+    background: rgba(218,166,62,.22);
+    color: #0b0f14;
+}
+.chip-lang{
+    padding: 0;
+    border: 0;
+    background: transparent;
+    opacity: .9;
+}
+
+.langsLine{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-start;
+    margin-top: 6px;
+}
+
+.showcaseBlock.right .langsLine{
+    justify-content: flex-end;
+}
+
+.lang{
+    font-size: 13px;
+    letter-spacing: .04em;
+    opacity: .85;
+}
+
+@media (max-width: 860px){
+    .showcase{
+        grid-template-columns: 1fr;
+    }
+    .showcaseIntro{
+        padding-right: 0;
+    }
+    .showcaseGrid{ grid-template-columns: 1fr; }
+    .showcaseBlock.span2{ grid-column: auto; }
 }
