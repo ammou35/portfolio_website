@@ -170,7 +170,7 @@ const Footer = () => {
                     className="contactIconLink"
                     href="https://www.linkedin.com/in/amira-mouamine"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label="LinkedIn"
                 >
                     <IconLinkedIn/>
@@ -181,7 +181,7 @@ const Footer = () => {
                     className="contactIconLink"
                     href="https://github.com/ammou35"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label="GitHub"
                 >
                     <IconGitHub/>
