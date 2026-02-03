@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState, useEffect } from "react";
+import React, { useMemo, useRef, useEffect } from "react";
 import "./projects.css";
 
 import cnc from "../../images/cnc.png";
@@ -79,7 +79,6 @@ const Projects = () => {
         []
     );
 
-    const [hovered, setHovered] = useState(null); // index
     const mouse = useRef({ x: 0, y: 0 });
     const raf = useRef(0);
     const marqueeRef = useRef(null);
@@ -205,7 +204,7 @@ const Projects = () => {
                                 className="projGithub"
                                 href={p.github}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label={`Open ${p.title} on GitHub`}
                                 title="View on GitHub"
                             >
