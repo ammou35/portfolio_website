@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import cv from "../../CV/cv.pdf";
 
 const Header = () => {
     const go = (hash) => {
@@ -15,7 +16,7 @@ const Header = () => {
             <button className="sheetNavItem" type="button" onClick={() => go("#projects")}>Projects</button>
             <button className="sheetNavItem" type="button" onClick={() => go("#contact")}>Contact</button>
 
-            <a className="sheetNavItem" href="/cv.pdf" download>Download CV</a>
+            <a className="sheetNavItem" href={cv} download>Download CV</a>
         </header>
     );
 };
