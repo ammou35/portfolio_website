@@ -3,6 +3,7 @@ import "./projects.css";
 
 import cnc from "../../images/cnc.png";
 import maze from "../../images/maze.png";
+import amedeo from "../../images/amedeo.gif";
 import sun_rey from "../../images/sun_rey.png";
 import portfolio from "../../images/portfolio.png";
 import floaty_frog from "../../images/floaty_frog.png";
@@ -29,6 +30,14 @@ const Projects = () => {
                 image: motion_logger,
                 year: "2022",
                 github: "https://github.com/ammou35/motion-logger/"
+            },
+            {
+                title: "3D Character",
+                description: "A minimalist low-poly character created for a game currently in development, made as a personal project to learn and organize a complete 3D workflow. Built in Blender, from the base mesh to a clean, animation-ready setup: retopology-aware modeling, rigging, and skinning (weight painting), plus shape keys for the hat. I also animated a set of actions for gameplay and integrated the full character into Unity for in-game use.",
+                tags: ["Blender", "Unity"],
+                image: amedeo,
+                year: "2025",
+                github: null
             },
             {
                 title: "Floaty-Frog",
@@ -183,7 +192,7 @@ const Projects = () => {
             </div>
 
             <div className="projectsGridCards">
-                {data.map((p, i) => (
+                {data.map((p) => (
                     <article className="projCard2" key={p.title}>
                         <div className="projMedia2">
                             <img src={p.image} alt="" loading="lazy"/>
