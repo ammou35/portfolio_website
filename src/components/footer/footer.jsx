@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./footer.css";
+import cv from "../../CV/cv.pdf";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnjdynlk";
 
@@ -190,7 +191,7 @@ const Footer = () => {
 
                 <a
                     className="contactIconLink"
-                    href="/cv.pdf"
+                    href={cv}
                     download
                     aria-label="Download CV"
                 >
