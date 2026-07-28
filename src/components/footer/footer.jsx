@@ -116,7 +116,7 @@ const Footer = () => {
                     <h2 className="contactTitle">Let’s work together.</h2>
 
                     <p className="contactText">
-                        I’m available for internships and full-time opportunities. If you’re hiring, let’s talk.
+                        I’m available for internships and part-time opportunities :)
                     </p>
                 </div>
 

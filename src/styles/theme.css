@@ -28,6 +28,8 @@
 
     --font: ui-sans-serif, system-ui, -apple-system, "Inter", "Space Grotesk", "Satoshi", "Neue Montreal", Arial, sans-serif;
     --font-display: "Yeseva One", serif;
+    --font-nav: "Space Grotesk", sans-serif;
+    --font-brand: "Fraunces", Georgia, serif;
 
     --z-content: 0;
     --z-hud: 10;

@@ -1,30 +1,80 @@
-.aboutWrap{
-    padding: 90px 18px 40px;
-    max-width: 1100px;
+.aboutWrap {
+    width: min(1420px, calc(100% - 64px));
+    max-width: none;
     margin: 0 auto;
+    padding: 90px 0 40px;
 }
 
-.showcase{
+.showcase {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 26px;
+    grid-template-columns: minmax(400px, 0.76fr) minmax(0, 1.24fr);
+    gap: clamp(20px, 2vw, 48px);
     align-items: start;
 }
 
-.showcaseIntro{
-    padding-right: 12px;
+.showcaseIntro {
+    position: relative;
+    max-width: 500px;
+    padding-left: 24px;
+    border-left: 2px solid rgba(218, 166, 62, 0.55);
 }
 
-.showcaseGrid{
+.introFocus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 22px;
+    color: var(--accent2);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.introFocus span:not(:last-child)::after {
+    content: "·";
+    margin-left: 18px;
+    color: var(--accent);
+}
+
+.skillGroups {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px 46px;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.skillGroup {
+    display: grid;
+    gap: 3px;
+}
+
+.skillGroupLabel {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.skillGroup p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.showcaseGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 1.15fr);
+    column-gap: 10px;
     margin-top: 6px;
+    align-items: start;
 }
 
-.col{
-    display: grid;
-    gap: 26px;
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-self: flex-start;
 }
 
 .showcaseKicker{
@@ -39,12 +89,16 @@
     line-height: 1.05;
 }
 
-.showcaseText{
+.showcaseText {
     margin: 0;
     max-width: 72ch;
-    color: var(--muted);
+    color: rgba(218, 166, 62, 0.6);
     font-size: 16px;
     line-height: 1.6;
+
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
 }
 
 .blockHead{
@@ -73,51 +127,99 @@
     width: 34px;
     height: 2px;
     border-radius: 999px;
-    background: var(--accent);
+    background: rgba(218, 166, 62, 0.55);
     opacity: .85;
 }
+
 .subHead{
     display: flex;
     justify-content: flex-start;
     margin-bottom: 8px;
 }
 
-.subLabel{
-    font-weight: 900;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: var(--accent);
-}
-
-.blockLogo{
-    height: 44px;
-    width: 170px;
-    object-fit: contain;
-    opacity: .95;
+.blockLogo {
     display: block;
-    transform: scale(1.2);
+    width: 145px;
+    height: 46px;
+    object-fit: contain;
+    object-position: right center;
+    opacity: .95;
+    transform: scale(1.12);
+    transform-origin: right center;
 }
 
-.logoFrame{
-    width: 170px;
-    height: 52px;
+.experienceItem .educationInfo {
+    flex: 1;
+}
+
+.experienceItem .blockLineStrong {
+    white-space: nowrap;
+}
+
+.educationItem {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.educationItem:first-child {
+    margin-top: 14px;
+}
+
+.educationLogo {
+    display: block;
+    width: 110px;
+    height: 50px;
+    flex: 0 0 110px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.educationItem.experienceItem {
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.bentleyLogoBox {
+    width: 84px;
+    height: 34px;
+    flex: 0 0 84px;
+
+    display: grid;
+    place-items: center;
     overflow: hidden;
 }
 
-.logoFrame.ul .blockLogo.ul{
-    transform: scale(6);
+.bentleyLogo {
+    display: block;
+    width: 110px;
+    height: 50px;
+    max-width: none;
+    object-fit: contain;
+
+    transform: translate(-18px, -8px) scale(1);
 }
 
-.blockLogo{
-    height: 44px;
-    width: 170px;
+.educationInfo {
+    min-width: 0;
+}
+
+.ulLogoBox {
+    width: 110px;
+    height: 50px;
+    flex: 0 0 110px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.ulLogo {
+    width: 110px;
+    height: 50px;
+    max-width: none;
     object-fit: contain;
-    opacity: .95;
-    display: block;
+    transform: translate(-15px, 5px) scale(6.5);
 }
 
 .blockMain{ display: grid; gap: 6px; }
@@ -132,31 +234,40 @@
     font-size: 13px;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: rgba(218, 166, 62, 0.8);
     opacity: .9;
     margin-top: 2px;
 }
 
-.chips{
+.chips {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 20px;
 }
 
-.chip{
-    padding: 0;
-    border: 0;
-    border-radius: 0;
+.chip {
     font-size: 13px;
+    line-height: 1;
 }
 
-.chip-skill{
-    padding: 8px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(218,166,62,.35);
-    background: rgba(218,166,62,.22);
-    color: #0b0f14;
+.chip-skill {
+    padding: 7px 10px;
+
+    border: 1px solid rgba(218, 166, 62, 0.8);
+    border-radius: 7px;
+
+    background: rgba(218, 166, 62, 0.2);
+    color: rgba(213, 184, 147, 0.8);
+
+    font-weight: 700;
+    white-space: nowrap;
 }
+
+.chip-skill::before {
+    content: none;
+}
+
 .chip-lang{
     padding: 0;
     border: 0;
@@ -164,31 +275,72 @@
     opacity: .9;
 }
 
-.langsLine{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    justify-content: flex-start;
-    margin-top: 6px;
+@media (max-width: 720px) {
+    .showcaseText {
+        text-align: left;
+        hyphens: none;
+    }
 }
 
-.showcaseBlock.right .langsLine{
-    justify-content: flex-end;
-}
+@media (max-width: 1120px) {
+    .aboutWrap {
+        width: min(980px, calc(100% - 48px));
+    }
 
-.lang{
-    font-size: 13px;
-    letter-spacing: .04em;
-    opacity: .85;
-}
-
-@media (max-width: 860px){
-    .showcase{
+    .showcase {
         grid-template-columns: 1fr;
+        gap: 44px;
     }
-    .showcaseIntro{
-        padding-right: 0;
+
+    .showcaseIntro {
+        max-width: 760px;
     }
-    .showcaseGrid{ grid-template-columns: 1fr; }
-    .showcaseBlock.span2{ grid-column: auto; }
+
+    .showcaseGrid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .aboutWrap {
+        width: calc(100% - 32px);
+        padding-top: 64px;
+    }
+
+    .showcaseGrid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .showcaseIntro {
+        padding-left: 18px;
+    }
+
+    .introFocus {
+        gap: 7px 12px;
+    }
+
+    .introFocus span:not(:last-child)::after {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 720px) {
+    .bentleyLogoBox {
+        width: 84px;
+        height: 25px;
+        flex: 0 0 84px;
+    }
+
+    .bentleyLogo {
+        transform: translate(-12px, -12px) scale(0.9);
+    }
+
+    .experienceItem .blockLineStrong {
+        white-space: normal;
+        font-size: 16px;
+    }
 }

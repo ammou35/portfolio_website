@@ -1,14 +1,19 @@
 import React, { useMemo, useRef, useEffect } from "react";
+import { FaItchIo } from "react-icons/fa6";
 import "./projects.css";
 
-import cnc from "../../images/cnc.png";
-import maze from "../../images/maze.png";
 import amedeo from "../../images/amedeo.gif";
-import sun_rey from "../../images/sun_rey.png";
-import portfolio from "../../images/portfolio.png";
+import cat_rats from "../../images/cat_rats.png";
+import cnc from "../../images/cnc.png";
+import emg from "../../images/emg.jpeg";
 import floaty_frog from "../../images/floaty_frog.png";
-import motion_logger from "../../images/motion_logger.gif";
 import graphics_editor from "../../images/graphics_editor.png";
+import losing_shleep from "../../images/losing_shleep.png";
+import maze from "../../images/maze.png";
+import motion_logger from "../../images/motion_logger.gif";
+import movie_recommender from "../../images/movie_recommender.png";
+import musicat from "../../images/musicat.png";
+import sun_rey from "../../images/sun_rey.png";
 
 const Projects = () => {
     const data = useMemo(
@@ -16,27 +21,46 @@ const Projects = () => {
             {
                 title: "Graphics Editor",
                 description:
-                    "Real-time graphics editor built in C++ with openFrameworks, combining 2D drawing tools with interactive 3D scenes (camera controls, lighting, and material/shading parameter tweaks). Supports importing images and 3D models, real-time rendering, and exporting camera renders for quick visualization.",
-                tags: ["C++", "GLSL", "OpenGL", "openFrameworks"],
+                    "Interactive 2D/3D graphics editor developed in C++ with OpenGL, GLSL and openFrameworks. Implemented camera controls, model and image import, lighting, materials, shader-based real-time rendering and render export.",
+                tags: ["C++", "OpenGL", "GLSL", "openFrameworks"],
                 image: graphics_editor,
                 year: "2023",
                 github: "https://github.com/ammou35/computer-graphics"
             },
             {
-                title: "Motion Logger",
+                title: "Movie Recommendation System",
                 description:
-                    "Project built to get hands-on with Rust through an end-to-end app (UI + server). Implemented motion detection with OpenCV (grayscale frame differencing) and logged time-stamped events to a motion_log.txt file, while serving a local web UI via a Warp HTTP server with endpoints to push, browse, and clear the event stream.",
-                tags: ["Rust", "OpenCV", "Warp"],
-                image: motion_logger,
-                year: "2022",
-                github: "https://github.com/ammou35/motion-logger/"
+                    "Hybrid recommendation system combining clustering, semantic similarity and supervised quality prediction. Processed movie descriptions and genres to identify related content and generate recommendations aligned with user preferences.",
+                tags: ["Python", "scikit-learn", "Machine Learning", "clustering"],
+                image: movie_recommender,
+                year: "2025",
+                github: "https://github.com/ammou35/movie_recommendations"
             },
             {
                 title: "3D Character",
-                description: "A minimalist low-poly character created for a game currently in development, made as a personal project to learn and organize a complete 3D workflow. Built in Blender, from the base mesh to a clean, animation-ready setup: retopology-aware modeling, rigging, and skinning (weight painting), plus shape keys for the hat. I also animated a set of actions for gameplay and integrated the full character into Unity for in-game use.",
-                tags: ["Blender", "Unity"],
+                description:
+                    "Created a low-poly character in Blender through a complete game-ready workflow: modeling, retopology, rigging, skinning, weight painting and shape keys. Animated a set of gameplay actions and integrated the character into Unity.",
+                tags: ["Blender", "Unity", "3D Modeling", "Rigging", "Animation"],
                 image: amedeo,
                 year: "2025",
+                github: null
+            },
+            {
+                title: "Sun-Rey",
+                description:
+                    "Story-driven solarpunk 2D game solo-developed during a one-week game jam, centered on Heliott and structured around arcade-style mini-games. Implemented movement, collisions, input and state systems, and created the original pixel-art environments and eight-direction character animations.",
+                tags: ["C#", "Unity", "2D", "Aseprite", "Game Jam"],
+                image: sun_rey,
+                year: "2025",
+                github: null
+            },
+            {
+                title: "CNC Cutting Simulator",
+                description:
+                    "Java/Swing application to draw CNC cuts, compute exportable toolpath trajectories, and generate coherent G-code files. Designed with usability in mind (clear workflow and interaction), and structured with modular patterns (MVC, Factory, Listener) for maintainability.",
+                tags: ["Java", "Swing", "GCODE"],
+                image: cnc,
+                year: "2024",
                 github: null
             },
             {
@@ -49,31 +73,41 @@ const Projects = () => {
                 github: null
             },
             {
-                title: "SunRey Game",
+                title: "EMG Gesture-Controlled Driving",
                 description:
-                    "Story-driven Unity game set in a solarpunk theme, centered on the main character Heliott. The progression is narrative, with arcade-style mini-games that introduce distinct mechanics and remain consistent with the world and pacing of the story.",
-                tags: ["C#", "Unity"],
-                image: sun_rey,
-                year: "2025",
-                github: null
-            },
-            {
-                title: "Personal Portfolio",
-                description:
-                    "Interactive React portfolio built to stay clear, explicit, and dynamic, with an emphasis on clean UX and performance. Set up a container-based dev environment to understand and reproduce the build setup easily across machines.",
-                tags: ["ReactJS", "Docker"],
-                image: portfolio,
+                    "Award-winning real-time gesture recognition project developed with the Laval University AI Club. Processed EMG sensor data and applied machine learning to translate hand gestures into driving commands, from simulation testing in Trackmania to deployment on a F1TENTH autonomous vehicle with VAUL.",
+                tags: ["Python", "Machine Learning", "EMG", "Signal Processing"],
+                image: emg,
                 year: "2026",
-                github: "https://github.com/ammou35/portfolio_website"
+                github: null
             },
             {
-                title: "CNC Cutting Simulator",
+                title: "Cat & Rats",
                 description:
-                    "Java/Swing application to draw CNC cuts, compute exportable toolpath trajectories, and generate coherent G-code files. Designed with usability in mind (clear workflow and interaction), and structured with modular patterns (MVC, Factory, Listener) for maintainability.",
-                tags: ["Java", "Swing", "GCODE"],
-                image: cnc,
-                year: "2024",
+                    "Two-player co-op game developed in Unity with custom controls, procedural level generation and a multi-scene game flow. Implemented an AI enemy using A* pathfinding and reactive behavior, alongside avatar customization, animations, VFX, SFX and music systems.",
+                tags: ["C#", "Unity", "A* Pathfinding"],
+                image: cat_rats,
+                year: "2026",
                 github: null
+            },
+            {
+                title: "Musicat",
+                description:
+                    "Wave-themed 3D platformer created during a one-week game jam. Designed the levels and programmed the core gameplay systems, while also modeling, texturing and animating original 3D assets in Blender before integrating them into Unity.",
+                tags: ["C#", "Unity", "Blender", "3D Animation"],
+                image: musicat,
+                year: "2026",
+                github: null,
+                itch: "https://dev-devy.itch.io/musicat"
+            },
+            {
+                title: "Motion Logger",
+                description:
+                    "Project built to get hands-on with Rust through an end-to-end app (UI + server). Implemented motion detection with OpenCV (grayscale frame differencing) and logged time-stamped events to a motion_log.txt file, while serving a local web UI via a Warp HTTP server with endpoints to push, browse, and clear the event stream.",
+                tags: ["Rust", "OpenCV", "Warp"],
+                image: motion_logger,
+                year: "2022",
+                github: "https://github.com/ammou35/motion-logger/"
             },
             {
                 title: "Assisted Maze (VHDL)",
@@ -84,12 +118,20 @@ const Projects = () => {
                 year: "2023",
                 github: null
             },
+            {
+                title: "Losing Shleep",
+                description:
+                    "Behavior-based 2D game created during a four-day GMTK game jam, centered on identifying wolves hidden among a flock of sheep. Features autonomous flock routines, stalking and escape behaviors, limited-range aiming, and a cohesive pixel-art presentation.",
+                tags: ["C#", "Unity", "2D", "Pixel Art", "Game Jam"],
+                image: losing_shleep,
+                year: "2026",
+                itch: "https://ruderaspberry.itch.io/losingshleep"
+            },
         ],
         []
     );
 
     const mouse = useRef({ x: 0, y: 0 });
-    const raf = useRef(0);
     const marqueeRef = useRef(null);
     const marqueeTrackRef = useRef(null);
     const mxRef = useRef(0);
@@ -119,20 +161,6 @@ const Projects = () => {
         };
         window.addEventListener("mousemove", onMove, { passive: true });
         return () => window.removeEventListener("mousemove", onMove);
-    }, []);
-
-    useEffect(() => {
-        const tick = () => {
-            const el = document.querySelector(".projPreview");
-            if (el) {
-                const x = mouse.current.x + 24;
-                const y = mouse.current.y - 24;
-                el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-            }
-            raf.current = requestAnimationFrame(tick);
-        };
-        raf.current = requestAnimationFrame(tick);
-        return () => cancelAnimationFrame(raf.current);
     }, []);
 
     useEffect(() => {
@@ -182,10 +210,10 @@ const Projects = () => {
                 <div className="projectsMarquee" aria-hidden="true" ref={marqueeRef}>
                     <div className="projectsMarqueeTrack" ref={marqueeTrackRef}>
                       <span className="projectsMarqueeInner">
-                        {"PROJECTS · ".repeat(30)}
+                        {"PROJECTS · ".repeat(50)}
                       </span>
-                                            <span className="projectsMarqueeInner">
-                        {"PROJECTS · ".repeat(30)}
+                      <span className="projectsMarqueeInner">
+                        {"PROJECTS · ".repeat(50)}
                       </span>
                     </div>
                 </div>
@@ -195,7 +223,7 @@ const Projects = () => {
                 {data.map((p) => (
                     <article className="projCard2" key={p.title}>
                         <div className="projMedia2">
-                            <img src={p.image} alt="" loading="lazy"/>
+                            <img src={p.image} alt={`${p.title} project preview`} loading="lazy"/>
                         </div>
 
                         <div className="projBody2">
@@ -208,7 +236,18 @@ const Projects = () => {
                                 ))}
                             </div>
                         </div>
-                        {p.github ? (
+                        {p.itch ? (
+                            <a
+                                className="projGithub"
+                                href={p.itch}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`View ${p.title} on itch.io`}
+                                title="View on itch.io"
+                            >
+                                <FaItchIo className="projGithubIcon" />
+                            </a>
+                        ) : p.github ? (
                             <a
                                 className="projGithub"
                                 href={p.github}
@@ -219,13 +258,7 @@ const Projects = () => {
                             >
                                 <GithubIcon className="projGithubIcon" />
                             </a>
-                        ) : (<span
-                                className="projGithub projGithubDisabled"
-                                aria-hidden="true"
-                                title="GitHub link not available"
-                            >
-                              <GithubIcon className="projGithubIcon" />
-                            </span>)}
+                        ) : null}
                     </article>
                 ))}
             </div>

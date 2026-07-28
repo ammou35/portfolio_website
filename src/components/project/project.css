@@ -76,7 +76,7 @@
 
 .projDesc{
     margin: 0;
-    color: var(--muted);
+    color: var(--accent2);
     line-height: 1.6;
     max-width: 60ch;
 }
