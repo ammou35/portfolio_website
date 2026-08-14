@@ -14,17 +14,14 @@ const AboutMe = () => {
                         Building interactive systems that feel alive.
                     </h2>
                     <p className="showcaseText" lang="en">
-                        I’m a Computer Engineering graduate from Université Laval, starting an M.Sc. in Computer
-                        Science with a focus on Artificial Intelligence at Université de Montréal. I like working on
-                        projects
-                        that sit between software engineering and interactive media, from real-time graphics and
-                        gameplay to computer vision and machine learning. I’m drawn to work where technical
-                        problem-solving and creative choices are part of the same process.
+                        Computer Engineering graduate from Université Laval, now pursuing an M.Sc. in Computer Science
+                        at Université de Montréal. I work across real-time graphics, gameplay, and applied AI, and I'm
+                        drawn to problems where technical constraints and creative decisions meet.
                     </p>
 
                     <div className="introFocus">
-                        <span>Software Engineering</span>
-                        <span>Real-Time Systems</span>
+                        <span>Real-Time Graphics</span>
+                        <span>Gameplay Systems</span>
                         <span>Applied AI</span>
                     </div>
                 </div>
@@ -61,7 +58,7 @@ const AboutMe = () => {
                                 <span className="blockLabel">Skills</span>
                             </div>
                             <div className="chips tight">
-                                {["C++", "C#", "C", "Python", "Rust", "OpenGL", "Unity", "Machine Learning", "React", "Docker"].map((s) => (
+                                {["C++", "C#", "C", "Python", "Java", "Rust", "VHDL", "OpenGL", "Unity", "Unreal Engine", "Machine Learning", "JavaScript/TypeScript", "React", "SQL", "Docker"].map((s) => (
                                     <span key={s} className="chip chip-skill">{s}</span>
                                 ))}
                             </div>
@@ -98,7 +95,7 @@ const AboutMe = () => {
                                             B.Eng. in Computer Engineering
                                         </div>
                                         <div className="blockLineMeta">
-                                            2021 - 2026
+                                            2022 - 2026
                                         </div>
                                     </div>
                                 </div>

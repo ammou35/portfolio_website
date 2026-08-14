@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="heroLayout">
                 <div className="heroInner">
                     <div className="heroKicker">
-                        <span>Creative Engineering</span>
+                        <span>Computer Engineer</span>
                         <span className="heroKickerLine" />
                     </div>
 
@@ -17,7 +17,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="heroSub">
-                        Software engineering for interactive, real-time experiences.
+                        Making it work is only the beginning.
                     </p>
                 </div>
 
